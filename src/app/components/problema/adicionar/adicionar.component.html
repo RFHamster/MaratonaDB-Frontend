@@ -1,0 +1,199 @@
+<div class="min-h-screen flex flex-column">
+  <div class="bg-blue-700" style="height:180px">
+    <div class="py-3 px-5 flex align-items-center justify-content-between relative lg:static" style="min-height: 80px">
+      <div class="text-300 text-2xl font-bold mb-3"
+        style="min-width: 220px; margin-top: 17px; margin-right: 15px;  display: flex; justify-content: center; align-items: center;">
+        <p class="text-indigo-100"> &lt;/&gt; MaratonaDB</p>
+      </div>
+      <a pRipple class="cursor-pointer block lg:hidden text-indigo-50" pStyleClass="@next" enterClass="hidden"
+        leaveToClass="hidden" [hideOnOutsideClick]="true">
+        <i class="pi pi-bars text-4xl"></i>
+      </a>
+      <div
+        class="align-items-center flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full bg-blue-700 left-0 top-100 z-1">
+        <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row">
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-search mr-2"></i>
+              <span>Buscar Problema</span>
+            </a>
+          </li>
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+              pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden"
+              leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
+              <i class="pi pi-pen-to-square mr-2"></i>
+              <span>Adicionar Problema</span>
+              <i class="pi pi-angle-down ml-auto lg:ml-3"></i>
+            </a>
+            <ul
+              class="list-none py-3 px-6 m-0 lg:px-0 lg:py-0 border-round shadow-0 lg:border-1 border-50 lg:shadow-2 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem cursor-pointer">
+              <li>
+                <a pRipple
+                  class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="pi pi-file-plus mr-2"></i>
+                  <span class="font-medium">Adicionar</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple
+                  class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="pi pi-link mr-2"></i>
+                  <span class="font-medium">Adicionar via Link</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-calendar mr-2"></i>
+              <span>Datas</span>
+            </a>
+          </li>
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 bg-blue-600font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-chart-line mr-2"></i>
+              <span>Roadmap</span>
+            </a>
+          </li>
+        </ul>
+        <ul
+          class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row border-top-1 border-indigo-400 lg:border-top-none">
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-bell text-base lg:text-2xl mr-2 lg:mr-0"></i>
+              <span class="block lg:hidden font-medium">Notifications</span>
+            </a>
+          </li>
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-user text-base lg:text-2xl mr-2 lg:mr-0"></i>
+              <span class="block lg:hidden font-medium">Perfil</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="p-5 flex flex-column flex-auto" style="margin-top: -8rem;background-color:#295bac;">
+    <div class=" surface-border border-round flex-auto table-container" style="background-color: #303D82;">
+      <!-- Colocar o HTML Aqui -->
+
+      <div class="px-4 py-8 md:px-6 lg:px-8">
+        <div class="flex justify-content-between flex-wrap">
+          <div class="flex align-items-center mb-3 md:mb-0">
+            <div class="text-900 font-bold text-3xl text-indigo-100">Adicionar Problemas</div>
+          </div>
+        </div>
+        <p class="text-600 text-xl text-indigo-50">Adicione Problemas que você fez e ganhe pontos ajudando a comunidade.
+          Lembre-se de subir a solução e dicas para ajudar seu amigo!</p>
+
+        <p-divider class="w-full"></p-divider>
+
+        <div class="grid grid-nogutter align-items-center">
+
+          <div class="col-12 border-round surface-border mt-2 table-height">
+            <!-- Colocar Mais HTML Aqui -->
+            <div class="grid formgrid p-fluid">
+              <div class="field mb-4 col-12 md:col-6">
+                <label for="nomeCompleto" class="font-medium text-900 text-indigo-100">Título do Problema</label>
+                <input [(ngModel)]="novoUsuario.nomeCompleto" id="nomeCompleto" type="text" pInputText
+                  style="background-color: #E0E7FF;">
+              </div>
+              <div class="field mb-4 col-12 md:col-6">
+                <label for="matricula" class="font-medium text-900 text-indigo-100">ID Original</label>
+                <input [(ngModel)]="novoUsuario.matricula" id="matricula" type="text" pInputText
+                  style="background-color: #E0E7FF;">
+              </div>
+              <div class="field mb-4 col-12 md:col-6">
+                <label for="senha" class="font-medium text-900 text-indigo-100">Origem</label>
+                <input [(ngModel)]="novoUsuario.password" id="senha" type="text" pInputText
+                  style="background-color: #E0E7FF;">
+              </div>
+              <div class="field mb-4 col-12 md:col-6">
+                <label for="dificuldadeFaixa" class="font-medium text-900 text-indigo-100">Dificuldade (Faixa)</label>
+                <p-dropdown inputId="dificuldadeFaixa" [options]="faixas" optionLabel="name" [filter]="true"
+                  filterBy="name" [showClear]="true" placeholder="Selecione a Dificuldade do Problema"
+                  (onChange)="onTamanhoChange($event)">
+                  <ng-template let-camiseta pTemplate="item">
+                    <div class="flex align-items-center">
+                      <div>{{camiseta.name}}</div>
+                    </div>
+                  </ng-template>
+                </p-dropdown>
+              </div>
+
+              <div class="field mb-4 col-12 md:col-6">
+                <label for="dica" class="font-medium text-900 text-indigo-100">Dica</label>
+                <div class="flex align-items-center">
+                  <input [(ngModel)]="novaDica" id="dica" type="text" pInputText style="background-color: #E0E7FF;"
+                    (keyup.enter)="adicionarDica()">
+                  <button pButton pRipple icon="pi pi-plus" class="ml-2 p-button-sm" (click)="adicionarDica()"></button>
+                </div>
+                <ul *ngIf="dicas.length > 0" class="list-none p-0 mt-2">
+                  <div *ngFor="let dica of dicas; let i = index">
+                    <li class="text-indigo-100 flex align-items-center justify-content-between mb-2">
+                      <span> Dica {{ i+1 }}: {{ dica }}</span>
+                      <button pButton icon="pi pi-trash" class="p-button-sm p-button-danger p-button-text ml-auto"
+                        (click)="removerDica(i)"></button>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+
+
+              <div class="field mb-4 col-12 md:col-6">
+                <label for="assunto" class="font-medium text-900 text-indigo-100">Assunto</label>
+                <div class="flex align-items-center">
+                  <input [(ngModel)]="novoAssunto" id="assunto" type="text" pInputText
+                    style="background-color: #E0E7FF;" (keyup.enter)="adicionarAssunto()">
+                  <button pButton pRipple icon="pi pi-plus" class="ml-2 p-button-sm"
+                    (click)="adicionarAssunto()"></button>
+                </div>
+                <ul *ngIf="assuntos.length > 0" class="list-none p-0 mt-2">
+                  <li *ngFor="let assunto of assuntos; let i = index" class="text-indigo-100 flex align-items-center">
+                    <span>{{ assunto }}</span>
+                    <button pButton icon="pi pi-trash" class="ml-2 p-button-sm p-button-danger p-button-text"
+                      (click)="removerAssunto(i)"></button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="border-top-1 text-indigo-100 mb-3 col-12"></div>
+              <div class="field mb-4 col-12 md:col-6">
+                <label for="arquivo" class="font-medium text-900 text-indigo-100">PDF do Problema</label>
+                <div class="flex align-items-center">
+                  <p-fileUpload name="arquivo" mode="basic" chooseLabel="Selecione o Arquivo"
+                    (onSelect)="onFileUploadArquivo($event)" [style]="{ 'background-color': '#E0E7FF' }" accept=".pdf">
+                  </p-fileUpload>
+                </div>
+              </div>
+              <div class="field mb-4 col-12 md:col-6">
+                <label for="solucao" class="font-medium text-900 text-indigo-100">Solução (.c,.py,.cpp,.java)</label>
+                <div class="flex align-items-center">
+                  <p-fileUpload name="solucao" mode="basic" chooseLabel="Selecione o Arquivo"
+                    (onSelect)="onFileUploadSolucao($event)" [style]="{ 'background-color': '#E0E7FF' }" accept=".c,.py,.cpp,.java">
+                  </p-fileUpload>
+                </div>
+              </div>
+
+              <div class="border-top-1 text-indigo-100 mb-3 col-12"></div>
+              <div class="col-12">
+                <button pButton pRipple [raised]="true" [text]="true" label="Adicionar Problema" class="w-auto mt-3"
+                  class="w-full" (click)="addProblem()" [outlined]="false"
+                  style="background-color: #3A5498; color: white;" [disabled] = "file"></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,178 @@
+<div class="min-h-screen flex flex-column">
+  <div class="bg-blue-700" style="height:180px">
+    <div class="py-3 px-5 flex align-items-center justify-content-between relative lg:static" style="min-height: 80px">
+      <div class="text-300 text-2xl font-bold mb-3"
+        style="min-width: 220px; margin-top: 17px; margin-right: 15px;  display: flex; justify-content: center; align-items: center;">
+        <p class="text-indigo-100"> &lt;/&gt; MaratonaDB</p>
+      </div>
+      <a pRipple class="cursor-pointer block lg:hidden text-indigo-50" pStyleClass="@next" enterClass="hidden"
+        leaveToClass="hidden" [hideOnOutsideClick]="true">
+        <i class="pi pi-bars text-4xl"></i>
+      </a>
+      <div
+        class="align-items-center flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full bg-blue-700 left-0 top-100 z-1">
+        <ul class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row">
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-search mr-2"></i>
+              <span>Buscar Problema</span>
+            </a>
+          </li>
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 font-medium border-round cursor-pointer transition-colors transition-duration-150"
+              pStyleClass="@next" enterClass="hidden" enterActiveClass="scalein" leaveToClass="hidden"
+              leaveActiveClass="fadeout" [hideOnOutsideClick]="true">
+              <i class="pi pi-pen-to-square mr-2"></i>
+              <span>Adicionar Problema</span>
+              <i class="pi pi-angle-down ml-auto lg:ml-3"></i>
+            </a>
+            <ul
+              class="list-none py-3 px-6 m-0 lg:px-0 lg:py-0 border-round shadow-0 lg:border-1 border-50 lg:shadow-2 lg:absolute surface-overlay hidden origin-top w-full lg:w-15rem cursor-pointer">
+              <li>
+                <a pRipple
+                  class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="pi pi-file-plus mr-2"></i>
+                  <span class="font-medium">Adicionar</span>
+                </a>
+              </li>
+              <li>
+                <a pRipple
+                  class="flex p-3 align-items-center text-600 hover:text-900 hover:surface-100 transition-colors transition-duration-150">
+                  <i class="pi pi-link mr-2"></i>
+                  <span class="font-medium">Adicionar via Link</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-calendar mr-2"></i>
+              <span>Datas</span>
+            </a>
+          </li>
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 bg-blue-600font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-chart-line mr-2"></i>
+              <span>Roadmap</span>
+            </a>
+          </li>
+        </ul>
+        <ul
+          class="list-none p-0 m-0 flex lg:align-items-center select-none flex-column lg:flex-row border-top-1 border-indigo-400 lg:border-top-none">
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-bell text-base lg:text-2xl mr-2 lg:mr-0"></i>
+              <span class="block lg:hidden font-medium">Notifications</span>
+            </a>
+          </li>
+          <li>
+            <a pRipple
+              class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-indigo-100 hover:text-indigo-50 hover:bg-blue-600 font-medium border-round cursor-pointer transition-colors transition-duration-150">
+              <i class="pi pi-user text-base lg:text-2xl mr-2 lg:mr-0"></i>
+              <span class="block lg:hidden font-medium">Perfil</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="p-5 flex flex-column flex-auto" style="margin-top: -8rem;background-color:#295bac;">
+    <div class=" surface-border border-round flex-auto table-container" style="background-color: #303D82;">
+      <!-- Colocar o HTML Aqui -->
+
+      <div class="px-4 py-8 md:px-6 lg:px-8">
+        <div class="flex justify-content-between flex-wrap">
+          <div class="flex align-items-center mb-3 md:mb-0">
+            <div class="text-900 font-bold text-3xl text-indigo-100">Busca de Problemas</div>
+          </div>
+        </div>
+        <p class="text-600 text-xl text-indigo-50">Busque problemas pelo seu ID, Título, Origem, Tema e/ou Dificuldade.
+        </p>
+
+        <p-divider class="w-full"></p-divider>
+
+        <div class="grid grid-nogutter align-items-center">
+          <p-floatLabel class="flex-auto lg:flex-1 mb-4 lg:mt-0 w-full mr-0 lg:mr-4 text-900">
+            <input pInputText id="id_problema" [(ngModel)]="idBuscar"
+              style="background-color: #E0E7FF; width: 100%;" />
+            <label for="id_problema">ID</label>
+          </p-floatLabel>
+
+          <p-floatLabel class="flex-auto lg:flex-1 mb-4 lg:mt-0 w-full mr-0 lg:mr-4 text-900">
+            <input pInputText id="titulo" [(ngModel)]="tituloBuscar" style="background-color: #E0E7FF; width: 100%;" />
+            <label for="titulo">Título</label>
+          </p-floatLabel>
+
+          <p-floatLabel class="flex-auto lg:flex-1 mb-4 lg:mt-0 w-full mr-0 lg:mr-4 text-900">
+            <input pInputText id="origem" [(ngModel)]="origemBuscar" style="background-color: #E0E7FF; width: 100%;" />
+            <label for="origem">Origem</label>
+          </p-floatLabel>
+
+          <p-floatLabel class="flex-auto lg:flex-1 mb-4 lg:mt-0 w-full mr-0 lg:mr-4 text-900">
+            <input pInputText id="temas" [(ngModel)]="temasBuscar" style="background-color: #E0E7FF; width: 100%;" />
+            <label for="temas">Tema (Busque Um)</label>
+          </p-floatLabel>
+
+          <p-multiSelect [options]="faixas" [(ngModel)]="selectedFaixas" placeholder="Faixas" optionLabel="name"
+            styleClass="w-full" [maxSelectedLabels]="2" selectedItemsLabel="{0} faixas selecionados"
+            class="flex-auto lg:flex-1 mb-4 lg:mt-0 w-full mr-0 lg:mr-4 text-900"></p-multiSelect>
+
+          <p-button icon="pi pi-search" styleClass="mb-4 lg:mt-0 flex-shrink-0" [raised]="true" [rounded]="false"
+            [text]="true" [outlined]="false" />
+
+          <div class="col-12 border-round surface-border mt-2 table-height" style="background-color: #E0E7FF;">
+            <!-- Colocar Mais HTML Aqui -->
+            <div class="overflow-x-scroll">
+              <p-table [value]="mockProblemas" [tableStyle]="{'min-width': '70rem'}" [rowHover]="true" [scrollable]="true" scrollHeight="45rem">
+                <ng-template pTemplate="header">
+                  <tr>
+                    <th [style.width]="'8%'"><span class="font-semibold text-xs text-color-secondary">ID</span></th>
+                    <th [style.width]="'8%'"><span class="font-semibold text-xs text-color-secondary">ID_Original</span></th>
+                    <th [style.width]="'34%'"><span class="font-semibold text-xs text-color-secondary">Título</span></th>
+                    <th [style.width]="'15%'"><span class="font-semibold text-xs text-color-secondary">Temas</span></th>
+                    <th [style.width]="'15%'"><span class="font-semibold text-xs text-color-secondary">Faixas</span></th>
+                    <th [style.width]="'20%'"><span class="font-semibold text-xs text-color-secondary">Origem</span></th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-problema>
+                  <tr>
+                    <td>
+                        <div>
+                          <p class="mt-0 mb-2 font-medium text-md text-color-primary">{{problema.Id}}</p>
+                        </div>
+                    </td>
+                    <td>
+                      <p class="mt-0 mb-2 font-normal text-base text-color-primary">{{problema.IdOriginal}}</p>
+                    </td>
+                    <td>
+                      <p class="mt-0 mb-2 font-normal text-base text-color-primary">{{problema.titulo}}</p>
+                    </td>
+                    <td>
+                      <p class="mt-0 mb-2 font-normal text-base text-color-secondary">{{problema.tema}}</p>
+                    </td>
+                    <td>
+                      <p class="mt-0 mb-2 font-normal text-base text-color-secondary">{{problema.faixa}}</p>
+                    </td>
+                    <td>
+                      <p class="mt-0 mb-2 font-normal text-base text-color-secondary">{{problema.origem}}</p>
+                    </td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+            <div class="grid grid-nogutter align-items-center justify-content-center mt-2">
+              <i (click)="goLeftRequest()" *ngIf="isLeftVisible" class="pi pi-arrow-circle-left mr-8" style="font-size: 1.8rem"></i>
+              <span class="text-lg text-color-primary">{{ pageNumber }}</span>  
+              <i (click)="goRightRequest()" *ngIf="isRightVisible" class="pi pi-arrow-circle-right ml-8" style="font-size: 1.8rem"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

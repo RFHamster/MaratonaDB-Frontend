@@ -1,0 +1,79 @@
+<div class="flex align-items-center justify-content-center" style="min-height: 100vh; background-color: #3A5498;">  
+    <div class="mx-4 my-8 md:mx-6 lg:mx-8" style="background-color: #303D82;">
+        <p-toast></p-toast>
+        <div class="p-4 shadow-2 border-round" style="background-color: #303D82;">
+            <div class="text-center mb-5">
+                
+                <div class="text-900 text-6xl font-bold mb-3">
+                    <p class="text-indigo-100"> &lt;/&gt; MaratonaDB</p>
+                </div>
+                <div class="text-900 text-5xl font-bold mb-3">
+                    <p class="text-indigo-100">Tela de Cadastro</p>
+                </div>
+            </div>
+            <div class="grid formgrid p-fluid">
+                <div class="field mb-4 col-12 md:col-6">
+                    <label for="nomeCompleto" class="font-medium text-900 text-indigo-100">Nome Completo</label>
+                    <input [(ngModel)]="novoUsuario.nomeCompleto" id="nomeCompleto" type="text" pInputText style="background-color: #E0E7FF;">
+                </div>
+                <div class="field mb-4 col-12 md:col-6">
+                    <label for="matricula" class="font-medium text-900 text-indigo-100">Matricula</label>
+                    <input [(ngModel)]="novoUsuario.matricula" id="matricula" type="text" pInputText style="background-color: #E0E7FF;">
+                </div>
+                <div class="field mb-4 col-12 md:col-6">
+                    <label for="user" class="font-medium text-900 text-indigo-100">Usuario</label>
+                    <input [(ngModel)]="novoUsuario.username" id="user" type="text" pInputText style="background-color: #E0E7FF;">
+                </div>
+                <div class="field mb-4 col-12 md:col-6">
+                    <label for="senha" class="font-medium text-900 text-indigo-100">Senha</label>
+                    <input [(ngModel)]="novoUsuario.password" id="senha" type="text" pInputText style="background-color: #E0E7FF;">
+                </div>
+                <div class="field mb-4 col-12 md:col-6">
+                    <label for="email" class="font-medium text-900 text-indigo-100">Email Insitucional</label>
+                    <input [(ngModel)]="novoUsuario.email" id="email" type="text" pInputText style="background-color: #E0E7FF;">
+                </div>
+                <div class="field mb-4 col-12 md:col-6">
+                    <label for="telefone" class="font-medium text-900 text-indigo-100">Telefone</label>
+                    <input [(ngModel)]="novoUsuario.telefone" id="telefone" type="text" pInputText style="background-color: #E0E7FF;">
+                </div>
+                <div class="field mb-4 col-12 md:col-6">
+                    <label for="rg" class="font-medium text-900 text-indigo-100">Registro Geral</label>
+                    <input [(ngModel)]="novoUsuario.rg" id="rg" type="text" pInputText style="background-color: #E0E7FF;">
+                </div>
+                <div class="field mb-4 col-12 md:col-6">
+                    <label for="orgaoEmissor" class="font-medium text-900 text-indigo-100">Orgão Emissor (RG)</label>
+                    <input [(ngModel)]="novoUsuario.orgaoEmissor" id="orgaoEmissor" type="text" pInputText style="background-color: #E0E7FF;">
+                </div>
+                <div class="field mb-4 col-12 md:col-6">
+                    <label for="cpf" class="font-medium text-900 text-indigo-100">CPF</label>
+                    <input [(ngModel)]="novoUsuario.cpf" id="cpf" type="text" pInputText style="background-color: #E0E7FF;">
+                </div>
+                <div class="field mb-4 col-12 md:col-6">
+                    <label for="tamanhoCamiseta" class="font-medium text-900 text-indigo-100">Tamanho da Camiseta</label>
+                    <p-dropdown inputId="tamanhoCamiseta" [options]="camisetas" optionLabel="name" [filter]="true"
+                        filterBy="name" [showClear]="true" placeholder="Selecione o Tamanho da Camiseta" (onChange)="onTamanhoChange($event)">
+                        <ng-template let-camiseta pTemplate="item">
+                            <div class="flex align-items-center">
+                                <div>{{camiseta.name}}</div>
+                            </div>
+                        </ng-template>
+                    </p-dropdown>
+                </div>
+                <div class="border-top-1 text-indigo-100 mb-3 col-12"></div>
+                <div class="field mb-4 col-12">
+                    <label for="primeiraGrad" class="font-medium text-900 text-indigo-100">Primeira Graduação</label>
+                    <div class="flex align-items-center">
+                        <p-inputSwitch [(ngModel)]="novoUsuario.primeiraGrad" inputId="primeiraGrad"></p-inputSwitch>
+                        <span class="ml-2 text-900 text-indigo-100">Marque se for sua primeira graduação</span>
+                    </div>
+                </div>
+                <div class="border-top-1 text-indigo-100 mb-3 col-12"></div>
+                <div class="col-12">
+                    <button pButton pRipple [raised]="true" [text]="true" label="Cadastrar" class="w-auto mt-3" class="w-full"
+                    (click)="cadastrar()" [outlined]="false" style="background-color: #3A5498; color: white;"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

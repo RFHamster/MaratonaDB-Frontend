@@ -1,0 +1,65 @@
+/* Estilizando o contêiner principal do p-multiSelect */
+::ng-deep .p-multiselect {
+    background-color: #E0E7FF !important;
+}
+
+/* Estilizando o dropdown aberto do p-multiSelect */
+::ng-deep .p-multiselect-panel {
+    background-color: #E0E7FF !important;
+}
+
+::ng-deep .p-multiselect-item:hover {
+    background-color: #C7D2FE !important;
+    color: #000000 !important;
+}
+
+::ng-deep .p-multiselect-item {
+    background-color: #E0E7FF !important;
+}
+
+::ng-deep .p-floatLabel {
+    background-color: #E0E7FF !important;
+}
+
+::ng-deep p-dropdown .p-inputtext {
+    background-color: #E0E7FF;
+    width: 100% !important;
+}
+
+::ng-deep .p-button {
+    background-color: #295bac !important;
+    color: #E0E7FF !important;
+}
+
+tr {
+    background-color: #E0E7FF;
+}
+
+th {
+    background-color: #C7D2FE;
+}
+
+tr:hover {
+    background-color: #C7D2FE;
+}
+
+.table-height {
+    height: 47rem;
+}
+
+.table-container {
+    height: 68rem;
+}
+
+@media (max-width: 1200px) {
+    .table-container {
+        height: 92rem;
+    }
+    .table-height {
+        height: 48rem;
+    }
+}
+
+td, th {
+    border-bottom: 0.3px ridge #C7D2FE; /* Cor da borda superior das células */
+}
